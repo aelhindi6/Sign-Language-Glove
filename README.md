@@ -16,7 +16,8 @@ provide consistent continuous values representing finger movement - ideal for
 detecting hand gestures.
 
 <img width="764" height="734" alt="image" src="https://github.com/user-attachments/assets/9fec7294-fee3-436a-aafe-c9f00805075c" />
-Figure 1: Tinkercad Simulation
+
+**Figure 1:** Tinkercad simulation
 
 # The output device is a 16x2 LCD display:
 - Input/Output: values read and processed from the flex sensor through Arduino. It
@@ -48,6 +49,27 @@ Basic Functionality:
 **Validation:** These tests confirmed the correct functionality of each flex sensor and the LCD display system.
 
 <img width="700" height="931" alt="image" src="https://github.com/user-attachments/assets/cf0532ea-cf88-4913-85de-835f58a60009" />
-Figure 2: Prototype on Breadboard
+
+**Figure 2:** Prototype on breadboard
+
+# Setbacks and Solutions
+
+**Challenge:** Calibrating the sensors and testing code without physical hardware.
+
+**Solution:** We used Tinkercad simulations to build and test the circuit and code collaboratively
+online first. We then used the Serial Monitor to fine-tune the sensor thresholds on the actual
+hardware.
+
+**Next Challenge:** Transitioning from a messy breadboard prototype to a clean, wearable glove
+with audio.
+
+**Solution:** We plan to solder the components, use a ribbon cable for the LCD, and add a battery.
+We will expand our current code to play matching sound clips from a speaker for each gesture.
+
+<img width="709" height="1400" alt="image" src="https://github.com/user-attachments/assets/2faf95b3-dccc-4193-ac03-350c31c3bf19" />
+
+**Figure 2:** Prototype with glove
+
+
 
 
