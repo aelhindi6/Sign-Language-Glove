@@ -15,6 +15,9 @@ gives changes in the voltage across the sensor.
 provide consistent continuous values representing finger movement - ideal for
 detecting hand gestures.
 
+<img width="764" height="734" alt="image" src="https://github.com/user-attachments/assets/9fec7294-fee3-436a-aafe-c9f00805075c" />
+Figure 1: Tinkercad Simulation
+
 # The output device is a 16x2 LCD display:
 - Input/Output: values read and processed from the flex sensor through Arduino. It
 will display the correspondence text that matches the detected gesture on the LCD.
@@ -45,5 +48,6 @@ Basic Functionality:
 **Validation:** These tests confirmed the correct functionality of each flex sensor and the LCD display system.
 
 <img width="700" height="931" alt="image" src="https://github.com/user-attachments/assets/cf0532ea-cf88-4913-85de-835f58a60009" />
+Figure 2: Prototype on Breadboard
 
 
