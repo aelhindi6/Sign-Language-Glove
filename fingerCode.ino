@@ -71,12 +71,12 @@ void loop() {
   // Debug: Print boolean values to see what's being detected
   Serial.println("Bools - T:" + String(t) + " P:" + String(p) + " M:" + String(m) + " R:" + String(r) + " K:" + String(k));
   
-  // Middle finger gesture
-  if (t && p && !m && r && k) {
+  //letter a
+  if (t && p && m && r && k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
-    lcd_1.print("fuck you!");
-    Serial.println("F");
+    lcd_1.print("Letter: A");
+    Serial.println("A");
     
   } 
   // Rock on gesture (thumb and pinky bent, others straight)
@@ -87,13 +87,15 @@ void loop() {
     Serial.println("Rad");
     
   } 
-  else if (t && !p && m && r && k) {
+  //f you gesture
+    else if (t && p && !m && r && !k) {
     lcd_1.clear();
-    lcd_1.setCursor(0, 0);  // Changed from (0, 2) to (0, 0)
-    lcd_1.print("Pointing");
-    Serial.println("p");
+    lcd_1.setCursor(0, 0);  
+    lcd_1.print("Fuck you!");
+    Serial.println("f you");
     
   } 
+ 
   else if (!t && p && m && r && k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);  // Changed from (0, 2) to (0, 0)
@@ -101,69 +103,57 @@ void loop() {
     Serial.println("gg");
     
   } 
-// ASL Letter C (C-shaped hand)
-else if (!t && !p && m && r && k) {
+  //ASL: C
+  else if (!t && !p && m && r && k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Letter: C");
     Serial.println("C");
 }
-// ASL Letter D (Index finger up, others closed)
-else if (!t && !p && !m && r && !k) {
+  
+  // ASL Letter D: Pointer up, others bent (t && !p && m && r && k)
+else if (t && !p && m && r && k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Letter: D");
     Serial.println("D");
 }
-// ASL Letter E (Fingers curled, thumb across)
-else if (t && !p && !m && !r && !k) {
-    lcd_1.clear();
-    lcd_1.setCursor(0, 0);
-    lcd_1.print("Letter: E");
-    Serial.println("E");
-}
-// ASL Letter F (OK sign - thumb and index touching)
-else if (!t && !p && !m && r && k) {
+  
+  else if (t && p && !m && !r && !k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Letter: F / OK");
     Serial.println("F/OK");
 }
-// ASL Letter I (Pinky up, others closed)
-else if (!t && p && !m && !r && !k) {
+  
+  else if (t && p && m && r && !k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Letter: I");
     Serial.println("I");
 }
-// ASL Letter L (Index and thumb extended)
-else if (t && !p && !m && r && !k) {
-    lcd_1.clear();
-    lcd_1.setCursor(0, 0);
-    lcd_1.print("Letter: L");
-    Serial.println("L");
-}
-// ASL Letter V (Peace sign)
-else if (!t && !p && !m && r && k) {
+  
+  else if (t && !p && !m && r && k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Peace / Letter: V");
     Serial.println("V");
 }
-// ASL Letter W (Three fingers up: middle, ring, pinky)
-else if (!t && p && !m && r && k) {
+  else if (!t && p && !m && !r && !k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
     lcd_1.print("Letter: W");
     Serial.println("W");
 }
-// ASL Letter Y (Thumb and pinky extended)
-else if (t && p && !m && !r && !k) {
+  
+  else if (!t && !p && m && r && !k) {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
-    lcd_1.print("Letter: Y");
-    Serial.println("Y");
+    lcd_1.print("Go Bulls!");
+    Serial.println("go bulls");
 }
+
+  
   else {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
