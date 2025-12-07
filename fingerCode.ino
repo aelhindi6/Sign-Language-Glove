@@ -101,13 +101,76 @@ void loop() {
     Serial.println("gg");
     
   } 
+// ASL Letter C (C-shaped hand)
+else if (!t && !p && m && r && k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: C");
+    Serial.println("C");
+}
+// ASL Letter D (Index finger up, others closed)
+else if (!t && !p && !m && r && !k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: D");
+    Serial.println("D");
+}
+// ASL Letter E (Fingers curled, thumb across)
+else if (t && !p && !m && !r && !k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: E");
+    Serial.println("E");
+}
+// ASL Letter F (OK sign - thumb and index touching)
+else if (!t && !p && !m && r && k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: F / OK");
+    Serial.println("F/OK");
+}
+// ASL Letter I (Pinky up, others closed)
+else if (!t && p && !m && !r && !k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: I");
+    Serial.println("I");
+}
+// ASL Letter L (Index and thumb extended)
+else if (t && !p && !m && r && !k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: L");
+    Serial.println("L");
+}
+// ASL Letter V (Peace sign)
+else if (!t && !p && !m && r && k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Peace / Letter: V");
+    Serial.println("V");
+}
+// ASL Letter W (Three fingers up: middle, ring, pinky)
+else if (!t && p && !m && r && k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: W");
+    Serial.println("W");
+}
+// ASL Letter Y (Thumb and pinky extended)
+else if (t && p && !m && !r && !k) {
+    lcd_1.clear();
+    lcd_1.setCursor(0, 0);
+    lcd_1.print("Letter: Y");
+    Serial.println("Y");
+}
   else {
     lcd_1.clear();
     lcd_1.setCursor(0, 0);
-    lcd_1.print("Hand Gesture");
+    lcd_1.print("Stop");
     lcd_1.setCursor(0, 1);
-    lcd_1.print("Ready");
-    Serial.println("None");
+    //lcd_1.print("Ready");
+    //Serial.println("None");
   }
   
   delay(300); // Single delay at the end
